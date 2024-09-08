@@ -5,9 +5,35 @@ import com.example.product.service.exception.productnotfoundexception;
 import com.example.product.service.models.products;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-@Service
-public class fakestoreproductservice implements productservice {
 
+import java.util.List;
+
+@Service("fakestore")
+public class fakestoreproductservice implements productservice {
+    @Override
+    public products selectproduct(String name) throws productnotfoundexception {
+        return null;
+    }
+
+    @Override
+    public void delete(long id) {
+
+    }
+
+    @Override
+    public products updatedproduct(long id, String name, String description, String category) {
+        return null;
+    }
+
+    @Override
+    public List<products> getproduct() {
+        return List.of();
+    }
+
+    @Override
+    public products createproduct(String name, String description, String category) {
+        return null;
+    }
 
     @Override
     public products getproductbyid(long id) throws productnotfoundexception {

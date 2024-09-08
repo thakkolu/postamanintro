@@ -1,13 +1,21 @@
 package com.example.product.service.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.Data;
 
-@Getter
-@Setter
+@Entity
+@Data
 public class products {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
     String name;
+
+    @Column(length = 500)
     String category;
+    @Column(columnDefinition = "TEXT")
     String description;
 
 

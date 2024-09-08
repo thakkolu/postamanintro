@@ -1,6 +1,12 @@
-package com.example.product.service.mappedsuperclass;
+package com.example.product.service.tableperclass;
 
-public class instructor extends user{
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+@Entity(name="tpc_instructors")
+
+public class instructor extends user {
      String avg_rating;
      String currcompany;
 
